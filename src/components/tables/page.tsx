@@ -1,0 +1,523 @@
+import { useEffect, useState } from "react";
+import { Payment, columns } from "./column";
+import { DataTable } from "./data-table";
+
+export default function TablePage() {
+  const [data, setData] = useState<Payment[]>([]);
+  useEffect(() => {
+    async function fetchData() {
+        const result = await getData();
+        setData(result);
+    }
+    fetchData();
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-black text-white px-10 w-full">
+      <DataTable columns={columns} data={data} />
+    </div>
+  );
+}
+async function getData(): Promise<Payment[]> {
+  return [{
+  "id": "01HBWXKGTS1R4PA4PR8BFVFVCH",
+  "amount": 575.12,
+  "status": "pending",
+  "email": "bcamilli0@soup.io"
+}, {
+  "id": "01HBWXKGTTYARVETJ2SQ40GTK7",
+  "amount": 184.82,
+  "status": "pending",
+  "email": "nmulroy1@ox.ac.uk"
+}, {
+  "id": "01HBWXKGTTR5G54SF5ZEAPNPRQ",
+  "amount": 844.61,
+  "status": "success",
+  "email": "ibengtsson2@netscape.com"
+}, {
+  "id": "01HBWXKGTV7JEQ0RG4WDPJW217",
+  "amount": 826.71,
+  "status": "processing",
+  "email": "tkeppel3@google.com.br"
+}, {
+  "id": "01HBWXKGTVPAV7G8RXB471W9PB",
+  "amount": 899.6,
+  "status": "processing",
+  "email": "himpleton4@spiegel.de"
+}, {
+  "id": "01HBWXKGTWRGSR0N73H48X0FWB",
+  "amount": 208.51,
+  "status": "processing",
+  "email": "rbathow5@imageshack.us"
+}, {
+  "id": "01HBWXKGTWQEQP3K9Q50GKEKNY",
+  "amount": 923.34,
+  "status": "pending",
+  "email": "sprise6@hexun.com"
+}, {
+  "id": "01HBWXKGTX4HR5AWYQ8FVD36YE",
+  "amount": 49.62,
+  "status": "failed",
+  "email": "ctourmell7@google.fr"
+}, {
+  "id": "01HBWXKGTXS9VXXVY3GWTG8J6B",
+  "amount": 978.37,
+  "status": "processing",
+  "email": "othow8@github.com"
+}, {
+  "id": "01HBWXKGTX0C1SN54BQH806MRM",
+  "amount": 135.69,
+  "status": "pending",
+  "email": "kdutton9@loc.gov"
+}, {
+  "id": "01HBWXKGTYA293R1W4B5W1GXQB",
+  "amount": 95.23,
+  "status": "failed",
+  "email": "dgillicuddya@desdev.cn"
+}, {
+  "id": "01HBWXKGTYXAB291JHY834028A",
+  "amount": 720.98,
+  "status": "processing",
+  "email": "eferrelib@squidoo.com"
+}, {
+  "id": "01HBWXKGTZM1V8NTFYKGTP096E",
+  "amount": 490.64,
+  "status": "pending",
+  "email": "elemarchandc@google.cn"
+}, {
+  "id": "01HBWXKGTZAV7QDCF0KKR1MPK6",
+  "amount": 847.71,
+  "status": "success",
+  "email": "jellard@ftc.gov"
+}, {
+  "id": "01HBWXKGV0RD5JVCKQ0C8TV2B7",
+  "amount": 167.27,
+  "status": "processing",
+  "email": "awhifene@networksolutions.com"
+}, {
+  "id": "01HBWXKGV0E98RYJKSDSFT4C6Z",
+  "amount": 674.12,
+  "status": "processing",
+  "email": "ccleaverf@rambler.ru"
+}, {
+  "id": "01HBWXKGV1EQWYXBG1C7NYXZM5",
+  "amount": 208.13,
+  "status": "failed",
+  "email": "cslaving@geocities.com"
+}, {
+  "id": "01HBWXKGV1XB3QGKKRT77G05TT",
+  "amount": 205.96,
+  "status": "success",
+  "email": "hdemcakh@dropbox.com"
+}, {
+  "id": "01HBWXKGV1BCR28WDPQYKQKN1N",
+  "amount": 289.94,
+  "status": "failed",
+  "email": "okinneiri@upenn.edu"
+}, {
+  "id": "01HBWXKGV2EBWRB7ZV1G853P78",
+  "amount": 135.31,
+  "status": "success",
+  "email": "phaselhurstj@gravatar.com"
+}, {
+  "id": "01HBWXKGV275X43VV8PNX1RNZN",
+  "amount": 970.91,
+  "status": "failed",
+  "email": "lmcwhorterk@china.com.cn"
+}, {
+  "id": "01HBWXKGV3K7JYYQRSBC1D7BZC",
+  "amount": 887.11,
+  "status": "pending",
+  "email": "bhuburnl@bbc.co.uk"
+}, {
+  "id": "01HBWXKGV3WW0SW95VBKZEAG9C",
+  "amount": 541.46,
+  "status": "pending",
+  "email": "jmooresm@g.co"
+}, {
+  "id": "01HBWXKGV4X011FVJ3BQTJNA4W",
+  "amount": 379.87,
+  "status": "success",
+  "email": "ghoulstonn@example.com"
+}, {
+  "id": "01HBWXKGV4D69MBV7WAPP2DBMR",
+  "amount": 973.47,
+  "status": "failed",
+  "email": "sclaceyo@instagram.com"
+}, {
+  "id": "01HBWXKGV4M9HG8EDQKW1Q3G82",
+  "amount": 864.35,
+  "status": "success",
+  "email": "dpatershallp@so-net.ne.jp"
+}, {
+  "id": "01HBWXKGV5P1Y89PJ0FEAB1E1X",
+  "amount": 122.87,
+  "status": "success",
+  "email": "dwildmanq@cdc.gov"
+}, {
+  "id": "01HBWXKGV5R4KX1ZABH7WWB8QP",
+  "amount": 882.4,
+  "status": "failed",
+  "email": "kcapponerr@indiatimes.com"
+}, {
+  "id": "01HBWXKGV6XM5XTYXC6TF9JE5S",
+  "amount": 299.33,
+  "status": "processing",
+  "email": "dmeiningers@e-recht24.de"
+}, {
+  "id": "01HBWXKGV668X196CVHN8CVBS9",
+  "amount": 771.1,
+  "status": "processing",
+  "email": "fpoundsfordt@so-net.ne.jp"
+}, {
+  "id": "01HBWXKGV6F4HFBMGQHMYBTM87",
+  "amount": 628.49,
+  "status": "processing",
+  "email": "kstoutheru@cbslocal.com"
+}, {
+  "id": "01HBWXKGV75QZSBH21T4S4N20P",
+  "amount": 716.55,
+  "status": "pending",
+  "email": "ovettorev@accuweather.com"
+}, {
+  "id": "01HBWXKGV7VT9PK5B40AZKKT4R",
+  "amount": 447.91,
+  "status": "pending",
+  "email": "hkenninghanw@toplist.cz"
+}, {
+  "id": "01HBWXKGV8A41HVBCW1AENM6C2",
+  "amount": 275.08,
+  "status": "failed",
+  "email": "rfogtx@amazonaws.com"
+}, {
+  "id": "01HBWXKGV883J7Z65FWENTPVX9",
+  "amount": 766.55,
+  "status": "processing",
+  "email": "dhawsy@usnews.com"
+}, {
+  "id": "01HBWXKGV91YE8DMJ30APNGJ9R",
+  "amount": 912.41,
+  "status": "success",
+  "email": "lsprullz@meetup.com"
+}, {
+  "id": "01HBWXKGV9762T9QHHRP487MNK",
+  "amount": 923.7,
+  "status": "processing",
+  "email": "rsheryn10@sitemeter.com"
+}, {
+  "id": "01HBWXKGV9W086R4Z3TVB4FA3V",
+  "amount": 280.65,
+  "status": "pending",
+  "email": "dcordner11@hubpages.com"
+}, {
+  "id": "01HBWXKGVARRBAJ6KPGYSN0P4S",
+  "amount": 590.49,
+  "status": "success",
+  "email": "lmonelle12@ustream.tv"
+}, {
+  "id": "01HBWXKGVACP02SASKPZAWXF9M",
+  "amount": 619.53,
+  "status": "processing",
+  "email": "joffer13@t-online.de"
+}, {
+  "id": "01HBWXKGVB3NVPHE5KR332R2VX",
+  "amount": 561.85,
+  "status": "success",
+  "email": "adorro14@nature.com"
+}, {
+  "id": "01HBWXKGVBQX8YS00NZ9FPPXDF",
+  "amount": 73.34,
+  "status": "processing",
+  "email": "rsinclar15@homestead.com"
+}, {
+  "id": "01HBWXKGVCMCSY564GPMPY3K5W",
+  "amount": 182.04,
+  "status": "processing",
+  "email": "mshurmer16@themeforest.net"
+}, {
+  "id": "01HBWXKGVCZ11Z4J2WG4T3G1SR",
+  "amount": 910.0,
+  "status": "processing",
+  "email": "bcuniam17@bing.com"
+}, {
+  "id": "01HBWXKGVC5C0NVK6J6KWD13KF",
+  "amount": 352.86,
+  "status": "failed",
+  "email": "aboniface18@istockphoto.com"
+}, {
+  "id": "01HBWXKGVD3K4VST7S7XPR5Y5N",
+  "amount": 0.47,
+  "status": "pending",
+  "email": "framsey19@ucoz.ru"
+}, {
+  "id": "01HBWXKGWJ5T4RHGRQZK4627R2",
+  "amount": 422.8,
+  "status": "failed",
+  "email": "bmacskeagan1a@xrea.com"
+}, {
+  "id": "01HBWXKGWKD9RVR3VVH3NMQZ4E",
+  "amount": 464.87,
+  "status": "failed",
+  "email": "sblonden1b@ustream.tv"
+}, {
+  "id": "01HBWXKGWM45039J4VPG96P90M",
+  "amount": 146.73,
+  "status": "pending",
+  "email": "peyre1c@addtoany.com"
+}, {
+  "id": "01HBWXKGWMM5WQS7S34R8CM1DH",
+  "amount": 747.22,
+  "status": "processing",
+  "email": "dbierton1d@salon.com"
+}, {
+  "id": "01HBWXKGWNZKP2Y782DNEB87CW",
+  "amount": 143.33,
+  "status": "pending",
+  "email": "mbagguley1e@tmall.com"
+}, {
+  "id": "01HBWXKGWPE1NH66M26F3EB67V",
+  "amount": 897.68,
+  "status": "processing",
+  "email": "sbouchard1f@csmonitor.com"
+}, {
+  "id": "01HBWXKGWQ7BKY5F4V54V50QGK",
+  "amount": 376.69,
+  "status": "processing",
+  "email": "jlennox1g@list-manage.com"
+}, {
+  "id": "01HBWXKGWQFS2BQGPF8PG05K55",
+  "amount": 423.98,
+  "status": "processing",
+  "email": "ajatczak1h@shutterfly.com"
+}, {
+  "id": "01HBWXKGWRA931HR9N6BY5EM2A",
+  "amount": 645.32,
+  "status": "failed",
+  "email": "jsalvadori1i@ucla.edu"
+}, {
+  "id": "01HBWXKGWR6B6RB7AQJ3T3SZFS",
+  "amount": 983.74,
+  "status": "pending",
+  "email": "bshirrell1j@themeforest.net"
+}, {
+  "id": "01HBWXKGWS41B73X2JSBYMVJVK",
+  "amount": 277.54,
+  "status": "failed",
+  "email": "mabsalom1k@abc.net.au"
+}, {
+  "id": "01HBWXKGWSSDMVZXEJSP97ARNK",
+  "amount": 324.38,
+  "status": "success",
+  "email": "fheinicke1l@nytimes.com"
+}, {
+  "id": "01HBWXKGWTF6NCT1X0EDNGB0Z5",
+  "amount": 623.16,
+  "status": "pending",
+  "email": "fcullum1m@storify.com"
+}, {
+  "id": "01HBWXKGWV37XB2YNQRH2RJYT3",
+  "amount": 601.58,
+  "status": "processing",
+  "email": "ryurinov1n@twitter.com"
+}, {
+  "id": "01HBWXKGWV1EM4FG5YVZAFMMWW",
+  "amount": 165.14,
+  "status": "processing",
+  "email": "amayworth1o@tripadvisor.com"
+}, {
+  "id": "01HBWXKGWW4SW8ZX3760BFKB44",
+  "amount": 578.9,
+  "status": "processing",
+  "email": "slandeg1p@de.vu"
+}, {
+  "id": "01HBWXKGWX8AG5YB37N55VESZG",
+  "amount": 470.41,
+  "status": "processing",
+  "email": "rashfull1q@illinois.edu"
+}, {
+  "id": "01HBWXKGWXFDP9FTTH1H7RM129",
+  "amount": 381.1,
+  "status": "failed",
+  "email": "clipsett1r@ask.com"
+}, {
+  "id": "01HBWXKGWY3XKDPZDBATVKN662",
+  "amount": 826.27,
+  "status": "success",
+  "email": "jreside1s@rediff.com"
+}, {
+  "id": "01HBWXKGWZC44QSXK616NHMWBD",
+  "amount": 991.04,
+  "status": "success",
+  "email": "kswaite1t@about.me"
+}, {
+  "id": "01HBWXKGWZC8XEHZRBBF3TD3Q5",
+  "amount": 520.23,
+  "status": "failed",
+  "email": "amcjerrow1u@phoca.cz"
+}, {
+  "id": "01HBWXKGX07ABH25YJ4Q9VP0PY",
+  "amount": 573.82,
+  "status": "pending",
+  "email": "msommerton1v@yahoo.co.jp"
+}, {
+  "id": "01HBWXKGX0DQ6QK23MYHZDMZK6",
+  "amount": 526.68,
+  "status": "success",
+  "email": "kabelwhite1w@studiopress.com"
+}, {
+  "id": "01HBWXKGX1J44NRFSZB4NF2YTE",
+  "amount": 974.05,
+  "status": "processing",
+  "email": "otomaszewski1x@ted.com"
+}, {
+  "id": "01HBWXKGX2010CVJAW2BD2NE0V",
+  "amount": 689.28,
+  "status": "processing",
+  "email": "ahillin1y@reddit.com"
+}, {
+  "id": "01HBWXKGX3N4637M52HXVD9PSP",
+  "amount": 956.3,
+  "status": "processing",
+  "email": "pdeverille1z@hexun.com"
+}, {
+  "id": "01HBWXKGX42HZA4MXC5P2Q76BX",
+  "amount": 566.54,
+  "status": "failed",
+  "email": "bmarriott20@aol.com"
+}, {
+  "id": "01HBWXKGX4AY7NAA3XBW6NWVQA",
+  "amount": 10.82,
+  "status": "failed",
+  "email": "gmahomet21@engadget.com"
+}, {
+  "id": "01HBWXKGX5JXXXKAP6PEBWD1RC",
+  "amount": 382.21,
+  "status": "pending",
+  "email": "cpentecust22@cmu.edu"
+}, {
+  "id": "01HBWXKGX5S896WQ17WCN733ZR",
+  "amount": 95.77,
+  "status": "pending",
+  "email": "ugodsafe23@tinypic.com"
+}, {
+  "id": "01HBWXKGX68TJTRFSAB5R5G2G5",
+  "amount": 668.45,
+  "status": "success",
+  "email": "cbagot24@theguardian.com"
+}, {
+  "id": "01HBWXKGX624VBFNWJTYQ0Q9K9",
+  "amount": 384.21,
+  "status": "failed",
+  "email": "elahive25@blogs.com"
+}, {
+  "id": "01HBWXKGX75W9QESJCGF8MAV35",
+  "amount": 839.59,
+  "status": "pending",
+  "email": "brosenfarb26@pinterest.com"
+}, {
+  "id": "01HBWXKGX7J04WMC7T4G9Y0VRE",
+  "amount": 845.62,
+  "status": "pending",
+  "email": "arolley27@cbslocal.com"
+}, {
+  "id": "01HBWXKGX83C4NG2X9YXSPC6B7",
+  "amount": 625.0,
+  "status": "pending",
+  "email": "eboas28@tamu.edu"
+}, {
+  "id": "01HBWXKGX8DNGD23PKFTCGY91E",
+  "amount": 476.35,
+  "status": "pending",
+  "email": "emcgiff29@4shared.com"
+}, {
+  "id": "01HBWXKGX9YS5STD7R89XJ9SFA",
+  "amount": 648.88,
+  "status": "success",
+  "email": "ggreenrod2a@microsoft.com"
+}, {
+  "id": "01HBWXKGXBGNMK5E9XP34SRMHK",
+  "amount": 484.99,
+  "status": "pending",
+  "email": "bvalenta2b@sfgate.com"
+}, {
+  "id": "01HBWXKGXBNF4DFNSWDR2J9K6K",
+  "amount": 893.66,
+  "status": "failed",
+  "email": "ufurse2c@tripod.com"
+}, {
+  "id": "01HBWXKGXC1WCAG3SBG578Y3WZ",
+  "amount": 184.22,
+  "status": "pending",
+  "email": "aewols2d@forbes.com"
+}, {
+  "id": "01HBWXKGXC847SK9E9YSSDG12G",
+  "amount": 432.34,
+  "status": "pending",
+  "email": "cshowt2e@tumblr.com"
+}, {
+  "id": "01HBWXKGXDHM023N9SBJPJ3CR7",
+  "amount": 495.55,
+  "status": "pending",
+  "email": "splait2f@clickbank.net"
+}, {
+  "id": "01HBWXKGXD06VJQWCA6H1CBCJT",
+  "amount": 8.0,
+  "status": "failed",
+  "email": "epascow2g@scientificamerican.com"
+}, {
+  "id": "01HBWXKGXEVHS79EBNERKJFJFN",
+  "amount": 551.09,
+  "status": "pending",
+  "email": "ltullett2h@cloudflare.com"
+}, {
+  "id": "01HBWXKGXEA9ABM5MD9Y84R94D",
+  "amount": 982.62,
+  "status": "processing",
+  "email": "cpennetta2i@cisco.com"
+}, {
+  "id": "01HBWXKGXFYYX1AGNJE8DFSZ7D",
+  "amount": 387.32,
+  "status": "pending",
+  "email": "spitcaithley2j@paypal.com"
+}, {
+  "id": "01HBWXKGXFPGM175V3CCJR13VW",
+  "amount": 915.78,
+  "status": "failed",
+  "email": "rwavish2k@livejournal.com"
+}, {
+  "id": "01HBWXKGXG782FB5WNK16ZA2J6",
+  "amount": 352.54,
+  "status": "success",
+  "email": "mmorot2l@pbs.org"
+}, {
+  "id": "01HBWXKGXGVWQ27P4VTR00YW4Q",
+  "amount": 610.94,
+  "status": "failed",
+  "email": "gtomkins2m@samsung.com"
+}, {
+  "id": "01HBWXKGXHE707SCXTC020KE0R",
+  "amount": 176.99,
+  "status": "success",
+  "email": "mbyron2n@sitemeter.com"
+}, {
+  "id": "01HBWXKGXJJGE0MZHM61PZD6RY",
+  "amount": 567.74,
+  "status": "failed",
+  "email": "agarforth2o@myspace.com"
+}, {
+  "id": "01HBWXKGXJ6P4QFA0WHKBYHSDN",
+  "amount": 155.18,
+  "status": "failed",
+  "email": "mmcfaell2p@nasa.gov"
+}, {
+  "id": "01HBWXKGXKKVYEG0022E24XHCR",
+  "amount": 878.87,
+  "status": "pending",
+  "email": "rpedroli2q@nytimes.com"
+}, {
+  "id": "01HBWXKGXK38E5F8JE19MNTXH6",
+  "amount": 322.15,
+  "status": "success",
+  "email": "afeakins2r@bigcartel.com"
+}]
+}

@@ -1,0 +1,422 @@
+import { useEffect, useState } from "react";
+import { UserDataTable } from "./data-table";
+import { User, columnUser } from "./column";
+
+export default function UserTable() {
+    const [userData, setUserData] = useState<User[]>([])
+    useEffect(() => {
+        async function getData() {
+            const res = await getUser()
+            setUserData(res)
+        }
+        getData()
+    },[])
+    return (
+        <div className="min-h-screen bg-black text-white px-10 w-full">
+            <UserDataTable columns={columnUser} data={userData}  />
+        </div>
+    )
+}
+async function getUser(): Promise<User[]> {
+    return [{
+  "id": "fad048af-bbaf-44f3-b2e4-a7f233857ab3",
+  "name": "nberthelmot0",
+  "email": "bcappineer0@statcounter.com"
+}, {
+  "id": "c798d54d-e931-4dd3-9507-8703550a3f2c",
+  "name": "clapadula1",
+  "email": "aparry1@weebly.com"
+}, {
+  "id": "2d9c2570-8aaf-4e9f-a6fb-bee1fd5681eb",
+  "name": "hciccone2",
+  "email": "mdoge2@a8.net"
+}, {
+  "id": "05273bf9-3eb7-4d0f-82c9-a43b71f00813",
+  "name": "wivannikov3",
+  "email": "ajeff3@histats.com"
+}, {
+  "id": "d028a990-1804-47a4-a3ac-e3a96220316c",
+  "name": "mpallin4",
+  "email": "mdartan4@soundcloud.com"
+}, {
+  "id": "86fe89de-c7ff-43bd-ae33-69503369050a",
+  "name": "imain5",
+  "email": "mlawlance5@w3.org"
+}, {
+  "id": "d464c740-ed5c-4a89-8e3b-53bea7f7f4d6",
+  "name": "adudley6",
+  "email": "sduncklee6@tuttocitta.it"
+}, {
+  "id": "c5cc87f7-f813-41ab-8ff7-001c202fa2fc",
+  "name": "rmarsland7",
+  "email": "ehedworth7@globo.com"
+}, {
+  "id": "6cc3d205-4be6-4cac-8b34-08f22a20a9fa",
+  "name": "gsidlow8",
+  "email": "thaggidon8@vistaprint.com"
+}, {
+  "id": "72d124da-78c0-439c-a90d-c11353cc0d1a",
+  "name": "ccasaletto9",
+  "email": "cenriquez9@photobucket.com"
+}, {
+  "id": "e5fd86c7-7582-4044-97a2-38964691c2c0",
+  "name": "ebrockelsbya",
+  "email": "jheaysmana@buzzfeed.com"
+}, {
+  "id": "0d1d1f0d-a688-473a-aee2-d0893ea08753",
+  "name": "fyellowleyb",
+  "email": "craffb@i2i.jp"
+}, {
+  "id": "6fd022f4-26e0-4b0d-8b10-3fcb32397cda",
+  "name": "aaseefc",
+  "email": "rplumleyc@privacy.gov.au"
+}, {
+  "id": "ac0f2428-8185-4afc-87bc-733e9ec4df58",
+  "name": "tcordesd",
+  "email": "amachostied@lycos.com"
+}, {
+  "id": "70f64761-8d54-4c46-8fe3-2b37800a2786",
+  "name": "lcausone",
+  "email": "ehudele@miibeian.gov.cn"
+}, {
+  "id": "df4ea27a-3140-4580-bb06-d3d84f0f7364",
+  "name": "nbrandhardyf",
+  "email": "mboggasf@oaic.gov.au"
+}, {
+  "id": "382ff453-3a04-40eb-8164-1c0e19545b18",
+  "name": "gletessierg",
+  "email": "rsalamong@canalblog.com"
+}, {
+  "id": "b92ddb57-cd79-4e05-a246-32644637b673",
+  "name": "ecalbreathh",
+  "email": "irigebyh@e-recht24.de"
+}, {
+  "id": "12d28a63-980b-4f11-85a4-2068f56f549d",
+  "name": "klovetti",
+  "email": "jmuckloei@nature.com"
+}, {
+  "id": "913d6d34-2275-493a-9f3f-10221116110b",
+  "name": "emoormanj",
+  "email": "tdocketj@nytimes.com"
+}, {
+  "id": "fba5f936-7ec7-466a-94e2-d4d541f74c64",
+  "name": "mcarthewk",
+  "email": "lsnassellk@wordpress.org"
+}, {
+  "id": "e36e9994-0038-4786-932d-059ae78d6bb3",
+  "name": "ccathiel",
+  "email": "sblucherl@dell.com"
+}, {
+  "id": "44b2c455-2291-4e53-b512-463c43a4e71c",
+  "name": "pwinwoodm",
+  "email": "asabaterm@jiathis.com"
+}, {
+  "id": "3b032edc-962d-43d9-9bd3-b4a3e40e7c2e",
+  "name": "swinsomen",
+  "email": "mleckeyn@goodreads.com"
+}, {
+  "id": "13c25ae3-6651-4846-8793-d1cff772872b",
+  "name": "gitzkovitcho",
+  "email": "dgoulthorpo@360.cn"
+}, {
+  "id": "3c7ac7d7-f4f6-43be-88bc-dabadcbd07ae",
+  "name": "hadaminip",
+  "email": "mbroschp@europa.eu"
+}, {
+  "id": "c5ba4d37-b3ce-459a-a657-36ec02727e92",
+  "name": "aotoweyq",
+  "email": "ystruysq@sciencedaily.com"
+}, {
+  "id": "01c79f0b-e522-41a9-9736-2cd5e5faaed2",
+  "name": "bforkanr",
+  "email": "agarnerr@altervista.org"
+}, {
+  "id": "a5021dfb-ffd6-470e-a0cf-4585e367d6d0",
+  "name": "scannons",
+  "email": "ohansfords@globo.com"
+}, {
+  "id": "c5a9d610-01bc-458b-96bb-a7f117412259",
+  "name": "abartomeut",
+  "email": "spalphreymant@macromedia.com"
+}, {
+  "id": "32a3d60e-bd50-4b0b-a9f3-153b4c6c07b1",
+  "name": "ldockreayu",
+  "email": "gaspinwallu@macromedia.com"
+}, {
+  "id": "ce50bba3-38f4-48c9-a991-1986d439ccad",
+  "name": "abuxamv",
+  "email": "wkuhlev@telegraph.co.uk"
+}, {
+  "id": "8c6a5ea6-0aee-4d8b-8f31-78be5e2fedf1",
+  "name": "cwitherbedw",
+  "email": "rmacparlandw@squidoo.com"
+}, {
+  "id": "0fd87bfc-9f7b-47e3-91ef-d6496c8918c2",
+  "name": "bpossellx",
+  "email": "mmazonowiczx@reddit.com"
+}, {
+  "id": "ea0b13b6-8956-4c04-bedb-dbe681163979",
+  "name": "scardwelly",
+  "email": "gwintertony@myspace.com"
+}, {
+  "id": "67317e38-5c86-4b5a-9bd0-da5c932710e7",
+  "name": "mcerseyz",
+  "email": "dtregidoz@plala.or.jp"
+}, {
+  "id": "e6dc98e0-085a-475c-80ef-d8f460b835af",
+  "name": "tcrippill10",
+  "email": "ebretton10@cbc.ca"
+}, {
+  "id": "6ece975f-b697-486c-867e-3d9e9a000248",
+  "name": "jmonahan11",
+  "email": "spearson11@gov.uk"
+}, {
+  "id": "902053f7-e5fc-4fff-addb-bb4c6be8fa2f",
+  "name": "nconaghy12",
+  "email": "cgrono12@google.es"
+}, {
+  "id": "bcea7cc5-17c7-4d18-a0e3-576cfc3fe69b",
+  "name": "kjimmes13",
+  "email": "lkulicke13@dailymail.co.uk"
+}, {
+  "id": "ab898cb0-265f-4df9-a58a-7789437acec4",
+  "name": "csisey14",
+  "email": "kvarga14@ted.com"
+}, {
+  "id": "d33cfcc8-ad47-4c81-b020-ed15761f6f18",
+  "name": "eludman15",
+  "email": "efasham15@miibeian.gov.cn"
+}, {
+  "id": "a943d7e7-1113-4041-b33a-c973c83b17a3",
+  "name": "nstobbe16",
+  "email": "mhardwell16@last.fm"
+}, {
+  "id": "09dee020-0ca7-4754-a152-e30ad560ec43",
+  "name": "yrigg17",
+  "email": "jevery17@fc2.com"
+}, {
+  "id": "77e2ef0a-92fd-4f3b-96e3-c23cf67fbc0f",
+  "name": "pharm18",
+  "email": "rmacbrearty18@weibo.com"
+}, {
+  "id": "bd24843a-352a-43da-98ab-bdb51e4fc359",
+  "name": "jromanelli19",
+  "email": "ggreensted19@blogtalkradio.com"
+}, {
+  "id": "57553570-a942-4748-8bd4-161bdaf826ad",
+  "name": "hchander1a",
+  "email": "mvitet1a@live.com"
+}, {
+  "id": "ee11ac18-0602-4ec5-be5d-60f68ed575ce",
+  "name": "mboldecke1b",
+  "email": "jseiffert1b@census.gov"
+}, {
+  "id": "15990d92-7be0-4b39-94fb-56bca0281dec",
+  "name": "tumbers1c",
+  "email": "kkeitley1c@xrea.com"
+}, {
+  "id": "9865a59d-89d4-45ca-9fe6-6237f600bdcc",
+  "name": "spiner1d",
+  "email": "kshorey1d@buzzfeed.com"
+}, {
+  "id": "d7e81dc2-de6c-4fbe-ba72-650422102c09",
+  "name": "abrooking1e",
+  "email": "epottiphar1e@si.edu"
+}, {
+  "id": "4b7a05b1-3048-4d26-878e-d30d993075d7",
+  "name": "abohills1f",
+  "email": "hquimby1f@msu.edu"
+}, {
+  "id": "ae921ce9-4882-4980-b3da-cfae3e69b0a9",
+  "name": "kmerryfield1g",
+  "email": "tclavey1g@geocities.com"
+}, {
+  "id": "7568d8c7-f9db-4e6e-9f08-7f50aed3d9fd",
+  "name": "bgovenlock1h",
+  "email": "lbaudet1h@bizjournals.com"
+}, {
+  "id": "cf68183f-78a0-426c-93b7-dfc066de2b17",
+  "name": "tmatthessen1i",
+  "email": "cbaulcombe1i@craigslist.org"
+}, {
+  "id": "1a2c1b69-e7c3-4626-bcba-f0bb8a846f35",
+  "name": "jgrant1j",
+  "email": "mmcilhatton1j@youtu.be"
+}, {
+  "id": "23f7b108-9bfa-400f-9f52-6c3ce10ff34c",
+  "name": "gjelfs1k",
+  "email": "tgermon1k@rediff.com"
+}, {
+  "id": "7916a883-c3aa-427b-8d0b-196ed2da7e89",
+  "name": "hsteinson1l",
+  "email": "rmcskeagan1l@lycos.com"
+}, {
+  "id": "ae3125c8-9fdc-4f5c-9845-93932861943f",
+  "name": "mcarwithim1m",
+  "email": "bblizard1m@businesswire.com"
+}, {
+  "id": "41f916e3-866e-4279-b9ef-6e8519e62b7f",
+  "name": "dropkes1n",
+  "email": "smurrhardt1n@apple.com"
+}, {
+  "id": "94830de5-66be-4925-a6cc-4e606e24d1eb",
+  "name": "dbrennans1o",
+  "email": "cbeevens1o@theatlantic.com"
+}, {
+  "id": "b07073c4-2e04-49f1-8247-cae620652be4",
+  "name": "esoltan1p",
+  "email": "speacock1p@networkadvertising.org"
+}, {
+  "id": "7232aac1-641a-4ba0-89bd-4dd4d3b302ac",
+  "name": "jlambourne1q",
+  "email": "mcarrigan1q@youku.com"
+}, {
+  "id": "e79c540b-0bee-429a-ab41-4497ac50732e",
+  "name": "ldow1r",
+  "email": "byouson1r@cbc.ca"
+}, {
+  "id": "f74433ac-392e-40f2-a27f-b05759554afe",
+  "name": "jjuszkiewicz1s",
+  "email": "epetrowsky1s@ft.com"
+}, {
+  "id": "3086aac5-7483-4b72-bffa-1deea21dbfd7",
+  "name": "cscripture1t",
+  "email": "zlampitt1t@netlog.com"
+}, {
+  "id": "1452f78e-81bb-44b3-b7d2-ab1d87b17c21",
+  "name": "hquarless1u",
+  "email": "awenger1u@va.gov"
+}, {
+  "id": "b8cfa085-fd08-4c20-a269-0866a1f30b6b",
+  "name": "mcervantes1v",
+  "email": "glawler1v@surveymonkey.com"
+}, {
+  "id": "454964a3-fccb-4533-b1e3-d8a32cbcd306",
+  "name": "mwitson1w",
+  "email": "smacklam1w@i2i.jp"
+}, {
+  "id": "594848bd-12da-4860-bb9d-33dea49e50da",
+  "name": "iroussell1x",
+  "email": "gbeechcraft1x@g.co"
+}, {
+  "id": "f4c920a3-4a7b-4eae-93bd-8ed471093d40",
+  "name": "rgolbourn1y",
+  "email": "dmaior1y@npr.org"
+}, {
+  "id": "ba6f3cb3-33f1-4967-9f03-073e69f15ef1",
+  "name": "jlagde1z",
+  "email": "ddudney1z@paginegialle.it"
+}, {
+  "id": "81c1990c-d051-4200-b63a-6901057511aa",
+  "name": "nbenkin20",
+  "email": "gruppeli20@drupal.org"
+}, {
+  "id": "ff2e79c5-9234-4c84-8317-e1d7ecbc15e2",
+  "name": "hthain21",
+  "email": "jmosdall21@oracle.com"
+}, {
+  "id": "7732d618-ac9d-4c36-b44b-32baf0f6a7af",
+  "name": "eputtock22",
+  "email": "browter22@opera.com"
+}, {
+  "id": "98f2e1a5-23a0-4462-878d-620ff1d12ed9",
+  "name": "arudland23",
+  "email": "lfredson23@chronoengine.com"
+}, {
+  "id": "7ccaa879-2460-49de-a186-fcd733d58dd4",
+  "name": "smctrustey24",
+  "email": "emaxwaile24@tamu.edu"
+}, {
+  "id": "bd5a4c47-0bce-407a-8aee-107d697cb150",
+  "name": "jclail25",
+  "email": "lrocks25@cocolog-nifty.com"
+}, {
+  "id": "209b4e17-76c0-40c2-a543-9d8448b31d7e",
+  "name": "urigge26",
+  "email": "dcraster26@rediff.com"
+}, {
+  "id": "660ee2b0-3520-4299-9914-cb234deba990",
+  "name": "htomes27",
+  "email": "ggiorgioni27@1und1.de"
+}, {
+  "id": "fe654a3a-db8f-4150-abc2-58aac8dcd24e",
+  "name": "ngaythwaite28",
+  "email": "pmenicomb28@netvibes.com"
+}, {
+  "id": "5ed07c70-4613-45a8-b6a2-caa57fd7693c",
+  "name": "tgainsburgh29",
+  "email": "lmacterlagh29@privacy.gov.au"
+}, {
+  "id": "19e130b1-a4b3-4e01-8c24-615309bae09a",
+  "name": "srickford2a",
+  "email": "shayselden2a@independent.co.uk"
+}, {
+  "id": "2f710783-405b-4725-a002-ac8fbf139dfc",
+  "name": "ijorez2b",
+  "email": "kgosford2b@taobao.com"
+}, {
+  "id": "c8611562-cf74-4026-a5f4-f28ccfc617fe",
+  "name": "nbownass2c",
+  "email": "rmartusov2c@csmonitor.com"
+}, {
+  "id": "419dfc07-d60e-4b0d-8e8c-5372dc525148",
+  "name": "mcallingham2d",
+  "email": "lwilshere2d@netvibes.com"
+}, {
+  "id": "9007e11d-639e-4591-bcc1-14547d370a8e",
+  "name": "nspender2e",
+  "email": "pshefton2e@hhs.gov"
+}, {
+  "id": "3898d31d-b44a-48a0-bbb9-49df09633514",
+  "name": "gagnew2f",
+  "email": "apallas2f@360.cn"
+}, {
+  "id": "ccb1300c-9e3b-49d9-977e-0891ad010b30",
+  "name": "bberriman2g",
+  "email": "lskehens2g@vimeo.com"
+}, {
+  "id": "e818656a-b270-4f5b-ab34-9a30c48c56c0",
+  "name": "vborris2h",
+  "email": "gsorensen2h@webmd.com"
+}, {
+  "id": "86c1e3b1-4c33-459e-8bae-8d3c1c3fbfdf",
+  "name": "gmcvaugh2i",
+  "email": "sduckerin2i@trellian.com"
+}, {
+  "id": "8adf0de7-dcc1-419b-99e5-a7bab7058c96",
+  "name": "mknight2j",
+  "email": "siddins2j@example.com"
+}, {
+  "id": "0f683b39-be97-43ea-849a-054fcd757b59",
+  "name": "lbartczak2k",
+  "email": "fbrodest2k@google.fr"
+}, {
+  "id": "4e1f8976-a8dd-4d1c-9454-5b948daf7a6e",
+  "name": "hibeson2l",
+  "email": "dboncore2l@bizjournals.com"
+}, {
+  "id": "4492b417-f064-4886-8ee1-05babda3e3ef",
+  "name": "hhuyge2m",
+  "email": "dniesegen2m@virginia.edu"
+}, {
+  "id": "4c251967-9911-4f05-b838-1747176edc91",
+  "name": "jbing2n",
+  "email": "rsamwaye2n@desdev.cn"
+}, {
+  "id": "4a664ab0-6265-4df5-86b9-705c94bc078d",
+  "name": "mdrohun2o",
+  "email": "vthresh2o@hugedomains.com"
+}, {
+  "id": "8461194f-1722-43cd-98af-61ab55448b97",
+  "name": "cbarron2p",
+  "email": "cjeannon2p@fda.gov"
+}, {
+  "id": "4c7be5f0-1c5f-4f5d-a902-ea9047d2ca40",
+  "name": "asalle2q",
+  "email": "mkilshall2q@delicious.com"
+}, {
+  "id": "25c7cf33-b05b-40ce-a0fc-46ec971d74a9",
+  "name": "croberson2r",
+  "email": "wmcbride2r@163.com"
+}]
+}
