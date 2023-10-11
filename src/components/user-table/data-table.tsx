@@ -1,4 +1,4 @@
-import { ColumnDef, ColumnFiltersState, SortingState, VisibilityState, flexRender, getCoreRowModel, getPaginationRowModel, getSortedRowModel, useReactTable } from "@tanstack/react-table";
+import { ColumnDef, ColumnFiltersState, SortingState, VisibilityState, flexRender, getCoreRowModel, getFilteredRowModel, getPaginationRowModel, getSortedRowModel, useReactTable } from "@tanstack/react-table";
 import { useState } from "react";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
@@ -21,6 +21,7 @@ export function UserDataTable<TData, TValue>({ columns, data }: UserTableProps<T
         onSortingChange: setSorting,
         getSortedRowModel: getSortedRowModel(),
         onColumnFiltersChange: setColumnFilters,
+        getFilteredRowModel: getFilteredRowModel(),
         onColumnVisibilityChange: setColumnVisibility,
         onRowSelectionChange: setRowSelection,
         state: {
@@ -33,11 +34,13 @@ export function UserDataTable<TData, TValue>({ columns, data }: UserTableProps<T
     return (
         <div>
             <div className="flex items-center py-5">
-                <Input type="text"
-                    value={(table.getColumn("email")?.getFilterValue() as string) ?? ""}
+                <Input
+                    value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
                     onChange={(event) =>
-                        table.getColumn("email")?.setFilterValue(event.target.value)
-                    } className="max-w-sm"
+                        table.getColumn("name")?.setFilterValue(event.target.value)
+                    }
+                    placeholder="Search name..."
+                    className="max-w-sm"
                 />
                 <DropdownMenu>
                 <DropdownMenuTrigger asChild>
